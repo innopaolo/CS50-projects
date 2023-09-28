@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Wheel of Time Trivia!</title>
+        <script>
+
+            // Check answer to multiple choice questions
+            document.addEventListener('DOMContentLoaded', function() {
+
+                // Correct items turn green and 'correct' word appears
+                let correct = document.querySelector('.correct');
+                correct.addEventListener('click', function() {
+                    correct.style.backgroundColor = 'green';
+                    document.querySelector('#resultMC').innerHTML = 'Correct!';
+                    document.querySelector('#resultMC').style.color = 'green';
+                    document.querySelector('#resultMC').style.fontSize = '200%';
+
+                    // Button goes back to original color after 1 second
+                    setTimeout(function() {
+                        correct.style.backgroundColor = '#d9edff';
+                    }, 1000);
+                });
+
+                // Incorrect items turn red and 'incorrect' word appears
+                let incorrect = document.querySelectorAll('.incorrect');
+                for (let i = 0; i < incorrect.length; i++) {
+                    incorrect[i].addEventListener('click', function() {
+                        incorrect[i].style.backgroundColor = 'red';
+                        document.querySelector('#resultMC').innerHTML = 'Incorrect!';
+                        document.querySelector('#resultMC').style.color = 'red';
+                        document.querySelector('#resultMC').style.fontSize = '200%';
+
+                        // Button goes back to original color after 1 second
+                        setTimeout(function() {
+                            incorrect[i].style.backgroundColor = '#d9edff';
+                        }, 1000);
+                    });
+                }
+                // Check answer to the input question with if/else
+                document.querySelector('#check').addEventListener('click', function() {
+                    let answer = document.querySelector('input').value.toLowerCase();
+                    let box = document.querySelector('input');
+                    if (answer === 'bela') {
+                        box.style.backgroundColor = 'green';
+                        document.querySelector('#resultFR').innerHTML = 'Correct!';
+                        document.querySelector('#resultFR').style.color = 'green';
+                        document.querySelector('#resultFR').style.fontSize = '200%';
+
+                        // Input box goes back to original color after 1 second
+                        setTimeout(function() {
+                            box.style.backgroundColor = '#d9edff';
+                        }, 1000);
+                    } else {
+                        box.style.backgroundColor = 'red';
+                        document.querySelector('#resultFR').innerHTML = 'Incorrect!';
+                        document.querySelector('#resultFR').style.color = 'red';
+                        document.querySelector('#resultFR').style.fontSize = '200%';
+
+                        // Input box goes back to original color after 1 second
+                        setTimeout(function() {
+                            box.style.backgroundColor = '#d9edff';
+                        }, 1000);
+                    }
+                });
+            });
+
+        </script>
+    </head>
+    <body>
+        <!-- New div to put both header and container in the middle of the flexbox -->
+        <div class="middle">
+            <!-- Header is an image of the trivia theme -->
+            <div class="header">
+                <img src="wot_header.jpg"
+                    width="400"
+                    height="300">
+            </div>
+
+            <div class="container">
+                <div class="section">
+                    <h2>Part 1: Multiple Choice </h2>
+                    <hr>
+                    <!-- Multiple choice question -->
+                    <h3>Cats from the Two Rivers have how many toes per paw?</h3>
+
+                    <button class="incorrect">Two toes!</button>
+                    <button class="incorrect">Three toes?</button>
+                    <button class="incorrect">Four toes!</button>
+                    <button class="incorrect">Five toes?</button>
+                    <button class="correct">Six toes!</button>
+
+                    <p id="resultMC"></p>
+                </div>
+                <!-- Spacing -->
+                <br>
+                <br>
+
+                <div class="section">
+                    <h2>Part 2: Free Response</h2>
+                    <hr>
+                    <!-- Free response question -->
+                    <h3>Who is the best horse in the book series?</h3>
+
+                    <input type="text"></input>
+                    <button id="check">Check Answer</button>
+
+                    <p id="resultFR"></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Side banners -->
+        <div class="side1">
+            <img src="side1.png">
+        </div>
+        <div class="side2">
+            <img src="side2.png">
+        </div>
+
+    </body>
+</html>

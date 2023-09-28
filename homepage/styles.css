@@ -1,0 +1,330 @@
+body#index {
+    background: url("indexbg_comp.jpg");
+	background-attachment: fixed;
+	background-position: center center;
+    background-color: #000000; /* In case picture doesn't load properly */
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin: 2em;
+}
+
+#topjeep {
+	margin-left: 150px;
+	height: 125px;
+}
+
+#jeep_img {
+	width: 100%;
+}
+
+#mspaint {
+	margin-right: 50px;
+}
+
+#paint_img {
+	display: block; /* Center the image */
+	margin-left: auto;
+	margin-right: auto;
+	width: 100%;
+}
+
+.longdiv {	
+	position: relative; /* Enables the readmore button to be positioned relative to this div */
+	height: 1000em; /* This is to give the user a long scrolling experience */
+	display: flex;
+	align-items: center;
+}
+
+#readmore {
+	position: absolute; /* Will take its cue from its ancestor div to be put at the bottom */
+	bottom: 0px;
+	margin-left: -20px;
+}
+
+#readmore:hover {
+	opacity: 0.8;
+}
+
+
+body#statuepage {
+	background-image: url("statuebg.jpg");
+	font-family: 'Courier New', monospace;
+	font-color: white;
+}
+
+.container {
+	border: 4px solid #B22222;
+	border-radius: 10px;
+	margin-top: 80px;
+	margin-bottom: 15px;
+	background-image: url("pink.jpg");
+	width: 60%
+}
+
+#thisman {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 40%;
+	margin-top: 50em;
+}
+
+#thisman:hover {
+	opacity: 0.5;
+}
+
+body#computerpage {
+	background-image: url("computerbg.jpg");
+	background-repeat: no-repeat;
+	background-size: 80em 75%; /* Width helps with background responsiveness on mobile */
+	background-position: fixed;
+	min-height: 100vh; /* Centers the bg in spite of the no-repeat attribute */
+	background-position: center;
+	background-color: black; /* Extra space on top and bottom will be filled with black */	
+	position: relative;
+}
+
+#top {
+	float: right;
+	position: relative;
+    -webkit-animation: bike1 8s infinite; /* Chrome, Safari, Opera */
+    -webkit-animation-direction: left; /* Chrome, Safari, Opera */
+    animation: bike1 8s infinite;
+    animation-direction: left;
+}
+
+/* Chrome, Safari, Opera */
+/* Animation to simulate riding a bicycle */
+@-webkit-keyframes bike1 {
+    0%   {right: 0px; top: 0px;}
+    100%  {right: 100%; top: 0px;}
+}
+
+@keyframes bike1 {
+    0%   {right: 0px; top: 0px;}
+    100%  {right: 100%; top: 0px;}
+}
+
+
+#bottom {
+	margin-left: 1200px;
+	position: absolute;
+	-webkit-animation: bike2 4s infinite; /* Chrome, Safari, Opera */
+    -webkit-animation-direction: left; /* Chrome, Safari, Opera */
+    animation: bike2 4s infinite;
+    animation-direction: left;
+}
+
+
+/* Chrome, Safari, Opera */
+/* Animation to simulate riding a bike */
+@-webkit-keyframes bike2 {
+    0%   {right: 0px; bottom: 0px;}
+    100%  {right: 100%; bottom: 0px;}
+}
+
+@keyframes bike2 {
+    0%   {right: 0px; bottom: 0px;}
+    100%  {right: 100%; bottom: 0px;}
+}
+
+
+#motherpage {
+	background-color: black;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	font-family: 'Courier New', monospace;
+}
+
+#eb { 
+	padding-top: 100px;
+	width: 100%;
+	max-width: 100%;
+	height: auto;
+}
+
+#chee {
+	width: 40%;
+	margin-right: 30px;
+	margin-bottom: 100px;
+}
+
+body#page2 {
+	background-image: url("page2bg.jpg");
+	background-repeat: no-repeat;
+    background-size: cover;
+	background-position: right 20%;
+	background-color: DarkKhaki; /* Color closest to the feeling of the background */
+	background-attachment: fixed;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+/* These properties are almost the same as img-fluid class from bootstrap
+   but allows me to customize width */
+#download_img {
+	max-width: 60%;
+	height: auto;
+	margin-top: 40px;
+	margin-left: 30px;
+}
+
+#hyperterminal {
+	display: inline-block;
+	max-width: 70%;
+	height: auto;
+	margin-left: 65px;
+	margin-top: -60px;
+	margin-bottom: 70px;
+}
+
+#scroll_down {
+	position: fixed;
+	bottom: 0px;
+	margin-left: 500px;
+}
+
+#diskette_img {
+	margin-top: 30em;
+	margin-bottom: 5em;
+	margin-left: 10%;
+	width: 70%;
+	height: auto;
+}
+
+#diskette:hover {
+	opacity: 0.8;
+}
+
+body#page3 {
+	background-image: url("page3bg.jpg");
+	background-attachment: fixed;
+	background-size: cover;
+	background-position: left 20%;
+	background-repeat: no-repeat;
+	position: relative;
+}
+
+@media only screen and (max-width: 600px) {
+  body#page3 {
+    	background-image: url("page3bgmobile.jpg");
+	background-attachment: fixed;
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+	position: relative;
+  }
+}
+
+.img-fluid {
+	margin-top: 2em;
+}
+
+p {
+	margin-top: 40em;
+	font-family: 'Courier New', monospace;
+}
+
+#pills {
+	margin-top: -35em;
+}
+
+.pill:hover {
+	transform: scale(1.2);
+}
+
+.btn {
+	margin-top: 40em;
+}
+
+#ghost {
+	opacity: 0; 
+	margin-bottom: 20em;
+	-webkit-animation: fadeInThenOut 14s ease-out;
+	-webkit-animation-delay: 8s;
+    animation: fadeInThenOut 14s ease-out;
+	animation-delay: 8s; /* Delay to give time to the visitor to read the alert first */
+	animation-iteration-count: infinite;
+}
+
+/* Chrome, Safari, Opera */
+/* Animation to fade in from 0 opacity then fade out */
+@-webkit-keyframes fadeInThenOut {
+    0% {
+        display: none;
+        opacity: 0;
+    }
+
+    1% {
+        display: block;
+        opacity: 0;
+    }
+	
+	50% {
+		display: block;
+		opacity: 1;
+	}
+
+    100% {
+        display: block;
+        opacity: 0;
+    }
+}
+
+@keyframes fadeInThenOut {
+    0% {
+        display: none;
+        opacity: 0;
+    }
+
+    1% {
+        display: block;
+        opacity: 0;
+    }
+	
+	50% {
+		display: block;
+		opacity: 1;
+	}
+
+    100% {
+        display: block;
+        opacity: 0;
+    }
+}
+
+/* Styles for website counter container */
+.website-counter {
+  opacity: 0; /* Hidden from visitors, work in progress and only for dev purposes */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #ff4957;
+  height: 50px;
+  width: 80px;
+  color: white;
+  border-radius: 30px;
+  font-weight: 700;
+  font-size: 25px;
+  margin-top: 10px;
+}
+
+/* Styles for reset button */
+#reset {
+  opacity: 0; /* Hidden from visitors, work in progress and only for dev purposes */
+  margin-top: 20px;
+  background-color: #008cba;
+  cursor: pointer;
+  font-size: 18px;
+  padding: 8px 20px;
+  color: white;
+  border: 0;
+}

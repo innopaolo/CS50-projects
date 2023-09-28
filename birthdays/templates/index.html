@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="/static/styles.css" rel="stylesheet">
+        <title>Birthdays</title>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Birthdays</h1>
+        </div>
+        <div class="container">
+            <div class="section">
+
+                <h2>Add a Birthday</h2>
+                <!-- Form for users to submit a name, a month, and a day -->
+                <form action="/" method="post">
+                    <input autocomplete="off" autofocus name="name" placeholder="Name" type="text">
+                    <input autocomplete="off" autofocus name="month" max="12" min="1" placeholder="Month" type="number">
+                    <input autocomplete="off" autofocus name="day" max="31" min="1" placeholder="Day" type="number">
+                    <input class="btn" type="submit" value="Add Birthday">
+                </form>
+            </div>
+
+            <div class="section">
+
+                <h2>All Birthdays</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Birthday</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                        <!-- Loop through the database entries to display them in this table -->
+                        {% for row in birthdays %}
+                        <tr>
+                            <td>{{ row.name }}</td>
+                            <td> <!-- Each edit cell gets an id per loop -->
+                                <div id="div-{{ row.id }}"><b>{{ row.month }}/{{ row.day }}</b></div>
+
+                                <!-- Edit date of birthday -->
+                                <div style="display:flex; flex-direction:row; justify-content:space-evenly;">
+                                    <input class="btn" id="{{ row.id }}" onClick="edit()" type="button" value="Edit">
+                                    <form action="/update" method="post">
+                                        <input class="btn" id="done-{{ row.id }}" onClick="done()" type="button" value="Done">
+                                    </form>
+                                </div>
+                            </td>
+
+                            <td>
+                                <div>
+                                    <!-- Delete entry from the table -->
+                                    <form action="/delete" method="post">
+                                        <input name="id" type="hidden" value="{{ row.id }}">
+                                        <input class="btn" type="submit" value="Delete">
+                                    </form>
+                                </div>
+                            </td>
+                        </tr>
+                        {% endfor %}
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <!-- Editing birthday within the form -->
+        <script>
+            function edit() {
+                input_id = event.srcElement.id;
+                text = document.getElementById("div-" + input_id);
+                text.contentEditable = true;
+                text.style.backgroundColor = "#F0F0F0";
+            }
+
+            function done() {
+                text.contentEditable = false;
+                text.style.backgroundColor = "transparent";
+            }
+        </script>
+    </body>
+</html>

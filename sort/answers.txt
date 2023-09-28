@@ -1,0 +1,23 @@
+sort1 uses: Bubble Sort
+
+How do you know?: Fast response time for numbers already sorted because Bubble has the
+advantage of getting an additional line of code that stops unnecessary loops.
+
+sort2 uses: Merge Sort
+
+How do you know?: Fastest response time
+
+sort3 uses: Selection Sort
+
+How do you know?: Slowest response time with sorted txt and lower bound is still pretty slow
+
+
+Averages
+
+    random5000      random10000     random50000      reversed5000        reversed10000       reversed50000
+s1  0.087           0.294           7.594            0.069               0.259               5.646
+s2  0.029           0.067           0.609            0.043  losest 0.017 0.077               1.793
+s3  0.052           0.167           3.310            0.057 lowest 0.042  0.163               3.343
+
+
+

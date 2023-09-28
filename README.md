@@ -8,6 +8,8 @@ Harvard's CS50 course is a comprehensive introduction to computer science and pr
 
 Each project directory contains the source code and any additional resources related to that project.
 
+Some of the cooler projects involve manipulating audio files, applying photo filters, DNA identification, JPEG recovery, and various other command-line programs.
+
 ## What I Learned
 
 During my journey through CS50, I learned a multitude of concepts and skills, including:
@@ -18,3 +20,6 @@ During my journey through CS50, I learned a multitude of concepts and skills, in
 - **Web Development**: I delved into web development, creating dynamic web applications using frameworks like Flask and exploring front-end technologies.
 - **Algorithms and Data Structures**: I honed my problem-solving skills by tackling complex algorithms and implementing fundamental data structures.
 - **Software Engineering Practices**: I adopted best practices for code organization, documentation, version control, and collaboration on GitHub.
+
+
+Feel free to reach out if you have any questions or need further clarification on any of the projects or concepts presented here. Thanks!
